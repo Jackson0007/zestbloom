@@ -65,15 +65,6 @@ const Auction = () => {
     return (
         <>
             <Box className="auction">
-                {/*My Auctions Activity*/}
-                {/*  To Do  */}
-                {/* <Notification
-                    activity={activity}
-                    openActivityMenu={openActivityMenu}
-                    onOpenBidModal={onOpenBidModal}
-                /> */}
-                {/* for minimalize  cards */}
-                {/* <Container maxWidth="xl" className={`auction-container ${activity ? 'collapsed' : ''}`}> */}
                 <Container maxWidth="xl" className={'auction-container'}>
                     <BreadcrumbsNav />
 
@@ -121,12 +112,7 @@ const Auction = () => {
 
                         {/*Filter DropdownDate*/}
                         <Box className="filter-sort">
-                            {/*Dropdown with checkboxes Auctions*/}
                             <DropdownAuctions />
-                            {/*Dropdown with checkboxes*/}
-                            {/*<DropdownFilter />*/}
-                            {/*Dropdown with Radio Buttons for Assets*/}
-                            {/* <DropdownSortAsset /> */}
                         </Box>
                     </Box>
 
@@ -157,10 +143,6 @@ const Auction = () => {
                                         onOpenBidModal={onOpenBidModal}
                                         isLoggedIn={true}
                                         setSelectedAsset={setSelectedAsset}
-                                        // upvoteAsset={() => {}}
-                                        // unUpvoteAsset={() => {}}
-                                        // toFavoritesAssets={() => {}}
-                                        // removeFromFavoritesAssets={() => {}}
                                     />
                                 </Grid>
                             ))}
