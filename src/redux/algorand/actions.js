@@ -1,7 +1,7 @@
 import * as TYPES from './types.js';
 import AlgorandServise from './services';
 
-export const getIPFSHash = (data) => (dispatch) => {
+export const getIPFSHash = (data) => () => {
     return AlgorandServise.getIPFSHash(data)
         .then((response) => {
             if (response.status === 201) {
@@ -48,7 +48,7 @@ export const getTealForContract = (nodeGuid) => (dispatch) => {
         });
 };
 
-export const deleteEscrowContract = (guid, blob) => (dispatch) => {
+export const deleteEscrowContract = (guid, blob) => () => {
     return AlgorandServise.deleteEscrowContract(guid, blob)
         .then((response) => {
             return response;
@@ -96,7 +96,7 @@ export const getManagerAddress = () => (dispatch) => {
         });
 };
 
-export const getAlgorandAccountInfo = (account) => (dispatch) => {
+export const getAlgorandAccountInfo = (account) => () => {
     return AlgorandServise.getAccountInfo(account)
         .then((response) => {
             if (response.status === 200) {
@@ -110,7 +110,7 @@ export const getAlgorandAccountInfo = (account) => (dispatch) => {
         });
 };
 
-export const setContract = (guid, blob) => (dispatch) => {
+export const setContract = (guid, blob) => () => {
     return AlgorandServise.setContract(guid, blob)
         .then((response) => {
             if (response.status === 200) {
@@ -124,7 +124,7 @@ export const setContract = (guid, blob) => (dispatch) => {
         });
 };
 
-export const activateOfferByEscrowContract = (guid, blob) => (dispatch) => {
+export const activateOfferByEscrowContract = (guid, blob) => () => {
     return AlgorandServise.activateOfferByEscrowContract(guid, blob)
         .then((response) => {
             if (response.status === 200) {
@@ -137,7 +137,7 @@ export const activateOfferByEscrowContract = (guid, blob) => (dispatch) => {
             return null;
         });
 };
-export const getOfferByEsscrowContract = (values) => (dispatch) => {
+export const getOfferByEsscrowContract = (values) => () => {
     return AlgorandServise.getOfferByEsscrowContract(values)
         .then((response) => {
             if (response.status === 201) {
@@ -153,7 +153,7 @@ export const getOfferByEsscrowContract = (values) => (dispatch) => {
         });
 };
 
-export const broadcastOffer = (values) => (dispatch) => {
+export const broadcastOffer = (values) => () => {
     return AlgorandServise.broadcastOffer(values)
         .then((response) => {
             if (response.status === 201) {
@@ -169,7 +169,7 @@ export const broadcastOffer = (values) => (dispatch) => {
         });
 };
 
-export const deleteOfferByEscrowContract = (guid) => (dispatch) => {
+export const deleteOfferByEscrowContract = (guid) => () => {
     return AlgorandServise.deleteOfferByEscrowContract(guid)
         .then((response) => {
             if (response.status === 201) {

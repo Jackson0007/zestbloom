@@ -32,11 +32,9 @@ export const getOfferAmount = (offer) => {
 
 export const getNetAmount = (isCreator, totalAmount, zestbloomPercent, royalties) => {
     if (isCreator) {
-        const netAmount = (totalAmount * (100 - zestbloomPercent)) / 100;
-        return netAmount;
+        return (totalAmount * (100 - zestbloomPercent)) / 100;
     } else {
-        const netAmount = (totalAmount * (100 - (zestbloomPercent + royalties))) / 100;
-        return netAmount;
+        return (totalAmount * (100 - (zestbloomPercent + royalties))) / 100;
     }
 };
 
